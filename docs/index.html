@@ -239,7 +239,7 @@
       </div>
     </div>
     <div class="container">
-      <a href="#" class="btn btn-reset tech__btn btn--purple">Арендовать</a>
+      <a href="#" class="btn btn-reset tech__btn btn--purple modal-btn">Арендовать</a>
     </div>
 
 </section>
@@ -569,6 +569,51 @@
     </div>
   </div>
 </section>
+
+      <div class="modal">
+  <div class="modal__body">
+    <div class="modal__close">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="Vector" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="modal__header">
+      <div class="modal__title title2">Оставьте <span>заявку</span></div>
+      <p class="modal__desc desc">мы с вами свяжемся</p>
+    </div>
+    <form action="post" class="modal__form form">
+      <label class="form__label">
+        <span class="form__capture">Имя</span>
+        <input type="text" class="form__input input-name">
+      </label>
+      <label class="form__label">
+        <span class="form__capture">Номер телефона</span>
+        <input type="tel" class="form__input input-tel">
+      </label>
+      <div class="form__items">
+        <span class="form__capture">Техника</span>
+        <div id="form-checks">
+          <div class="form__row">
+            <input type="checkbox" value="Велосипед" class="form__checkbox" id="check1">
+            <label for="#check1" class="form__check">Велосипед</label>
+          </div>
+          <div class="form__row">
+            <input type="checkbox" value="Мотоцикл" class="form__checkbox" id="check1">
+            <label for="#check2" class="form__check">Мотоцикл</label>
+          </div>
+          <div class="form__row">
+            <input type="checkbox" value="Квадроцикл" class="form__checkbox" id="check1">
+            <label for="#check3" class="form__check">Квадроцикл</label>
+          </div>
+        </div>
+      </div>
+      <label class="form__label">
+        <span class="form__capture">Время брони</span>
+        <input type="time" class="form__time">
+      </label>
+    </form>
+  </div>
+</div>
 
     </main>
     <footer class="footer">

@@ -10615,6 +10615,26 @@ faqItems.forEach(item => {
     content.style.maxHeight = isActive ? content.scrollHeight + 'px' : null;
   });
 });
+const modalButtons = document.querySelectorAll('.modal-btn');
+const modal = document.querySelector('.modal');
+const modalBody = modal.querySelector('.modal__body');
+const modalClose = modal.querySelector('.modal__close');
+modalButtons.forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    modal.classList.add('active');
+  });
+});
+modalClose.addEventListener('click', e => {
+  e.preventDefault();
+  modal.classList.remove('active');
+});
+modal.addEventListener('click', e => {
+  modal.classList.remove('active');
+});
+modalBody.addEventListener('click', e => {
+  e.stopPropagation();
+});
 /******/ })()
 ;
 //# sourceMappingURL=main.js.map
