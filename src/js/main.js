@@ -1,4 +1,5 @@
 import './_components.js';
+import { modalSlider } from './components/sliders.js';
 
 
 const faqItems = document.querySelectorAll('.faq__item')
@@ -66,10 +67,15 @@ window.addEventListener('scroll', e => {
 const charsModalBtn = document.querySelectorAll('.modal-btn-chars')
 const charsModal = document.querySelector('.modal-info')
 const modalBodies = document.querySelectorAll('.modal-chars, .modal-price')
-charsModalBtn.forEach(btn => {
+charsModalBtn.forEach((btn, idx) => {
+
   btn.addEventListener('click', e => {
     charsModal.classList.add('active')
+
+    modalSlider.slideTo(idx)
   })
+
+
 })
 modalBodies.forEach(body => {
   body.addEventListener('click', e => {

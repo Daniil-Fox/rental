@@ -80,58 +80,90 @@
     opacity: 1;
     z-index: 999;
   }
-  .modal-price, .modal-chars {
+  &__wrapper {
     width: 100%;
-    overflow: auto;
+  }
+  &__slide {
+    box-sizing: border-box;
+    width: 30rem;
     background-color: #fff;
+
+    padding: 2rem;
   }
-  table {
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem 3rem;
+    margin-bottom: 3rem;
+  }
+
+  &__slider {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
     display: block;
-    table-layout: fixed;
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  &__capture {
+    font-size: 1.8rem;
+  }
+
+  &__table {
+    display: block;
     width: 100%;
 
-    border-collapse: collapse;
-    thead, tbody {
+    border: 1px solid purple;
+    padding: 1rem 2rem;
+    caption {
+      display: block;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    tbody {
       width: 100%;
+      display: block;
+      tr {
+        display: flex;
+        justify-content: space-between;
+        td {
+          flex: 1;
+          border: 1px solid purple;
+          text-align: center;
+          padding: 1rem;
+          font-size: 1.6rem;
+          font-weight: 600;
 
-    }
-    thead th:nth-child(1) {
-      width: 30%;
-    }
-
-    thead th:nth-child(2) {
-      width: 20%;
-    }
-
-    thead th:nth-child(3) {
-      width: 15%;
-    }
-
-    thead th:nth-child(4) {
-      width: 35%;
-    }
-    tr {
-      width: 100%;
-      border: 1px solid #441C67;
-    }
-    td, th {
-      border: 1px solid #441C67;
-      padding: 1rem;
-    }
-    th {
-      font-size: 1.4rem;
-      color: #441C67;
-      font-size: 700;
-      letter-spacing: 0.02em;
-    }
-    td {
-      font-size: 1.2rem;
-      letter-spacing: 0.04em;
-      // white-space: nowrap;
+          &:not(:last-child){
+            border-right: none;
+          }
+        }
+      }
     }
   }
-
-
 }
 
 

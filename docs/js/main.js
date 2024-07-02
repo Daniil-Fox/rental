@@ -5489,6 +5489,7 @@ async function main() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   modalSlider: () => (/* binding */ modalSlider),
 /* harmony export */   pointsSlider: () => (/* binding */ pointsSlider)
 /* harmony export */ });
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
@@ -5501,15 +5502,23 @@ const techSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper('.tech__slider
   spaceBetween: 20,
   centeredSlides: true
 });
-const techWrapper = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper('.tech__images', {
-  slidesPerView: 1,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  }
-});
-techSlider.on('slideChange', swiper => {
-  techWrapper.slideTo(swiper.activeIndex);
+
+// const techWrapper = new Swiper('.tech__images', {
+//   slidesPerView: 1,
+//   effect: 'fade',
+//   fadeEffect: {
+//     crossFade: true
+//   }
+// })
+
+// techSlider.on('slideChange', swiper => {
+//   techWrapper.slideTo(swiper.activeIndex)
+// })
+
+const modalSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper('.modal-info__slider', {
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  spaceBetween: 30
 });
 const pointsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper('.points__slider', {
   slidesPerView: 1,
@@ -16176,6 +16185,8 @@ var __webpack_exports__ = {};
   \************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_components.js */ "./src/js/_components.js");
+/* harmony import */ var _components_sliders_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sliders.js */ "./src/js/components/sliders.js");
+
 
 const faqItems = document.querySelectorAll('.faq__item');
 faqItems.forEach(item => {
@@ -16229,9 +16240,10 @@ window.addEventListener('scroll', e => {
 const charsModalBtn = document.querySelectorAll('.modal-btn-chars');
 const charsModal = document.querySelector('.modal-info');
 const modalBodies = document.querySelectorAll('.modal-chars, .modal-price');
-charsModalBtn.forEach(btn => {
+charsModalBtn.forEach((btn, idx) => {
   btn.addEventListener('click', e => {
     charsModal.classList.add('active');
+    _components_sliders_js__WEBPACK_IMPORTED_MODULE_1__.modalSlider.slideTo(idx);
   });
 });
 modalBodies.forEach(body => {

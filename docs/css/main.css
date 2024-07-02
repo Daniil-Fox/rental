@@ -359,6 +359,7 @@ a {
   padding: 8rem 0 5rem;
   position: relative;
   overflow: hidden;
+  background-color: #1f1f1f;
 }
 .tech__title {
   color: #fff;
@@ -570,7 +571,6 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   position: relative;
 }
 .roads::before {
@@ -1000,49 +1000,99 @@ a {
   opacity: 1;
   z-index: 999;
 }
-.modal-info .modal-price, .modal-info .modal-chars {
+.modal-info__wrapper {
   width: 100%;
-  overflow: auto;
+}
+.modal-info__slide {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 30rem;
   background-color: #fff;
+  padding: 2rem;
 }
-.modal-info table {
+.modal-info__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+.modal-info__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1.5rem 3rem;
+  margin-bottom: 3rem;
+}
+.modal-info__slider {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+.modal-info__icon {
+  width: 4rem;
+  height: 4rem;
+}
+.modal-info__icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.modal-info__title {
   display: block;
-  table-layout: fixed;
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+.modal-info__capture {
+  font-size: 1.8rem;
+}
+.modal-info__table {
+  display: block;
   width: 100%;
-  border-collapse: collapse;
+  border: 1px solid purple;
+  padding: 1rem 2rem;
 }
-.modal-info table thead, .modal-info table tbody {
+.modal-info__table caption {
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.modal-info__table tbody {
   width: 100%;
+  display: block;
 }
-.modal-info table thead th:nth-child(1) {
-  width: 30%;
+.modal-info__table tbody tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
-.modal-info table thead th:nth-child(2) {
-  width: 20%;
-}
-.modal-info table thead th:nth-child(3) {
-  width: 15%;
-}
-.modal-info table thead th:nth-child(4) {
-  width: 35%;
-}
-.modal-info table tr {
-  width: 100%;
-  border: 1px solid #441C67;
-}
-.modal-info table td, .modal-info table th {
-  border: 1px solid #441C67;
+.modal-info__table tbody tr td {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: 1px solid purple;
+  text-align: center;
   padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
-.modal-info table th {
-  font-size: 1.4rem;
-  color: #441C67;
-  font-size: 700;
-  letter-spacing: 0.02em;
-}
-.modal-info table td {
-  font-size: 1.2rem;
-  letter-spacing: 0.04em;
+.modal-info__table tbody tr td:not(:last-child) {
+  border-right: none;
 }
 
 .form__capture {

@@ -8,18 +8,27 @@ const techSlider = new Swiper('.tech__slider', {
   centeredSlides: true
 })
 
-const techWrapper = new Swiper('.tech__images', {
-  slidesPerView: 1,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  }
+// const techWrapper = new Swiper('.tech__images', {
+//   slidesPerView: 1,
+//   effect: 'fade',
+//   fadeEffect: {
+//     crossFade: true
+//   }
+// })
+
+
+// techSlider.on('slideChange', swiper => {
+//   techWrapper.slideTo(swiper.activeIndex)
+// })
+
+const modalSlider = new Swiper('.modal-info__slider', {
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  spaceBetween: 30
 })
 
 
-techSlider.on('slideChange', swiper => {
-  techWrapper.slideTo(swiper.activeIndex)
-})
+
 
 const pointsSlider = new Swiper('.points__slider', {
   slidesPerView: 1,
@@ -80,4 +89,4 @@ rNextBtn.addEventListener('click', e => {
 
   roadsSlider.slideNext()
 })
-export {pointsSlider}
+export {pointsSlider, modalSlider}
