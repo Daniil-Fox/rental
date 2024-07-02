@@ -37,3 +37,47 @@ modal.addEventListener('click', e => {
 modalBody.addEventListener('click', e => {
   e.stopPropagation()
 })
+
+
+const menu = document.querySelector('.menu')
+const menuBtn = document.querySelector('.header__burger')
+const menuItems = menu.querySelectorAll('.nav__link')
+menuBtn.addEventListener('click', e => {
+  menu.classList.toggle('active')
+})
+
+menuItems.forEach(link => {
+  link.addEventListener('click', e => {
+    menu.classList.remove('active')
+  })
+})
+
+const header = document.querySelector('.header')
+window.addEventListener('scroll', e => {
+  if(window.scrollY > 0){
+    header.classList.add('scroll')
+  } else {
+    header.classList.remove('scroll')
+  }
+})
+
+
+
+const charsModalBtn = document.querySelectorAll('.modal-btn-chars')
+const charsModal = document.querySelector('.modal-info')
+const modalBodies = document.querySelectorAll('.modal-chars, .modal-price')
+charsModalBtn.forEach(btn => {
+  btn.addEventListener('click', e => {
+    charsModal.classList.add('active')
+  })
+})
+modalBodies.forEach(body => {
+  body.addEventListener('click', e => {
+    e.stopPropagation()
+  })
+})
+
+
+charsModal.addEventListener('click', e => {
+  charsModal.classList.remove('active')
+})

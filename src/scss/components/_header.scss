@@ -1,17 +1,30 @@
 // ваш код
 .header {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 100;
   padding: 1.5rem 0;
+
+  transition: .3s ease-out;
+
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 990;
   }
-
+  &__logo {
+    width: 14rem;
+    height: 5rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
   &__burger {
     width: 6rem;
     height: 4rem;
@@ -24,4 +37,10 @@
   }
 
 
+}
+
+
+.header.scroll {
+  background-color: rgba(#000, 0.5);
+  backdrop-filter: blur(5px);
 }
