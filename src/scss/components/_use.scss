@@ -1,0 +1,83 @@
+.use {
+  padding: 7rem 0;
+  background-color: #141414;
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 7rem;
+    color: #fff;
+
+    span {
+      color: transparent;
+      background: linear-gradient(to top, #00000080, rgb(121, 3, 175));
+      background-clip: text;
+    }
+  }
+
+  &__items {
+    padding: 0 3rem;
+  }
+
+  &__item {
+    padding: 2rem 1rem;
+
+    border: 1px solid rgb(121, 3, 175);
+    border-radius: 1rem;
+    background-color: #303030;
+
+    &:not(:last-child){
+      margin-bottom: 3rem;
+    }
+  }
+  &__header {
+    margin-bottom: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__fig {
+    font-size: 2.4rem;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  &__capture {
+    font-weight: 300;
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 144%;
+    letter-spacing: 0.02em;
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__link {
+    display: block;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: transparent;
+      fill: #7a19ae;
+    }
+
+    &:last-child {
+      background-color: #7a19ae;
+      svg {
+        width: 70%;
+        height: 70%;
+        fill: #303030;
+      }
+    }
+  }
+}

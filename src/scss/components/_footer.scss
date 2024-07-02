@@ -1,0 +1,39 @@
+.footer {
+  padding: 2rem 0;
+  background-color: #141414;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  &__left {
+    flex-shrink: 0;
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+  }
+  &__right {
+    // text-align: right;
+  }
+  &__copy {
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    color: #fff;
+    font-weight: 200;
+
+    &:not(:last-child){
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: #7A19AE;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+}
